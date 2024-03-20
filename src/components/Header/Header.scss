@@ -1,0 +1,52 @@
+@import '../../variables.scss';
+header {
+	width: 100%;
+  height: 70px;
+  background-image: url('/bg-header.png');
+	background-size: cover;
+  box-shadow: 2px 2px 22px white;
+  position: fixed;
+  border-bottom: 1px solid white;
+  z-index: 998;
+	.logo {
+		font-size: 2rem;
+		color: $primary;
+		border: 1px solid $primary;
+		padding: 0 10px;
+		cursor: pointer;
+  	outline:1px solid $white;
+		outline-offset: -5px;
+		transition: 250ms ease;
+		box-shadow: 3px 3px black;
+		scale: 1;
+		a::after {
+			background-color: none;
+			width: 0;
+		}
+		&:hover i {
+			transition: 250ms ease;
+			scale: 1.2;
+		}
+		&:hover,
+		&:focus {
+			box-shadow: 5px 5px 10px black;
+			color: $primary;
+			outline: 3px solid $white !important;
+			// border: 3px solid $primary;
+			outline-offset: 0px ;
+			transition: 200ms ease;
+		}
+	}
+	.btn {
+		border: 1px solid $white;
+		outline:1px solid $white;
+		outline-offset: -6px;
+		transition: 200ms ease;
+		&:hover,
+		&:focus {
+			outline:3px solid $white !important;
+			outline-offset: 0px ;
+			transition: 250ms ease;
+		}
+	}
+}

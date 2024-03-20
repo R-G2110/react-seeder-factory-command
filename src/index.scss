@@ -1,0 +1,71 @@
+@import './variables.scss';
+:root {
+  
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+a {
+  color: currentColor;
+  text-decoration: none;
+  position: relative;
+  transition: color 500ms ease; 
+  &::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    width: 0; 
+    background-color: $primary;
+    transform-origin: left; 
+    transition: width 500ms ease; 
+  }
+  &:hover{
+    color: $primary; 
+  }
+  &:hover::after {
+    width: 100%; 
+    box-shadow: 1px 1px 5px $white;
+  }
+}
+
+
+
+
+body {
+  position: relative;
+}
+
+.navbar {
+  --bs-navbar-padding-y: 0rem;
+}
+
+.form-floating > .form-control {
+  height: calc(3rem + calc(1px * 2));
+  min-height: calc(3rem + calc(1px * 2));
+}
+
+.custom-btn {
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  outline: 1px solid currentColor;
+  outline-offset: -8px ;
+  transition: 200ms ease;
+  box-shadow: 2px 2px 2px black;
+  &:hover,
+  &:focus {
+    font-weight: 700;
+    outline-offset: 0px ;
+    outline: 3px solid currentColor;
+    transition: 200ms ease;
+    box-shadow: 10px 10px 10px black;
+  }
+}
